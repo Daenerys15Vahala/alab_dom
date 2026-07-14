@@ -13,6 +13,7 @@ mainEl.innerHTML = "<h1>DOM Manipulation</h1>";
 mainEl.classList.add("flex-ctr");
 
 
+// ------------------------------------------
 
 // menu bar
 const topMenuEl = document.querySelector("#top-menu");
@@ -25,3 +26,31 @@ topMenuEl.style.backgroundColor = "var(--top-menu-bg)";
 
 // add class
 topMenuEl.classList.add("flex-around");
+
+// ---------------------------------------
+
+// menu buttons
+
+// data buttons
+
+var menuLinks = [
+  { text: 'about', href: '/about' },
+  { text: 'catalog', href: '/catalog' },
+  { text: 'orders', href: '/orders' },
+  { text: 'account', href: '/account' },
+];
+
+// menu links
+for (const link of menuLinks){
+    // a element
+const newElement = document.createElement("a");
+// href for link
+    newElement.setAttribute("href", link.href);
+    // text property
+    newElement.innerHTML =link.text;
+    // append - add
+    topMenuEl.append(newElement);
+}
+
+
+
